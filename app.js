@@ -1,10 +1,11 @@
 var express = require('express')
 //默认找routes下面的index.js文件
-var router = require('./routes')
+var router = require('./routes/route.js')
 var app=express()
 
-
-app.use(express.static('public'))
+//const cors=require('cors')
+//app.use(cors())
+app.use(express.static("dist"))
 app.use(router)
 
 app.listen(4000,function (req,res) {

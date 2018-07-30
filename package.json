@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js \"gulp livereload\" ",
-    "dev":"gulp livereload"
+    "dev": "gulp livereload"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.3"
   },
   "devDependencies": {

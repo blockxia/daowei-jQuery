@@ -10,12 +10,12 @@ var item = require('../data/item.json')
 //服务页数据
 var service = require('../data/service.json')
 
-router.get('/msite',function (req,res) {
-  res.get(index)
+router.get('/index',function (req,res) {
+  res.send(index)
 })
 
 router.get('/',function (req,res) {
-  res.get(comment)
+  res.send(comment)
 })
 
 

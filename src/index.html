@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_724723_nacjspgeg48.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/built.min.css">
+  <script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+  <script type="text/javascript" src="js/built.min.js"></script>
+  <script type="text/javascript" src="js/jquery.slideBox.js"></script>
+  <link rel="stylesheet" href="css/jquery.slideBox.css">
 </head>
 <body>
 <div id="app">
@@ -24,13 +28,12 @@
             <li>
               <a href="javascript:;">
                 <span>
-                  <i class="iconfont icon-dizhiguanli"></i>
-                  <span class="no_change_red">上海</span>
+                  <i class="iconfont icon-dizhiguanli" style="color:red"></i>
+                  <span style="color:#000">上海</span>
                   <span>&nbsp;切换城市</span>
                 </span>
               </a>
             </li>
-            <!--class="change_red"-->
             <li>
               <a href="index.html">首页</a>
             </li>
@@ -41,32 +44,356 @@
               <a href="index.html">服务商</a>
             </li>
             <li>
-              <a href="index.html">首页</a>
-            </li>
-            <li>
               <a href="index.html">商家入驻</a>
             </li>
             <li>
               <a href="index.html">关于我们</a>
             </li>
-            <li>
+            <li class="last_bg_red">
               <a href="index.html">商家登录</a>
             </li>
           </ul>
         </div>
     </div>
   </div>
+  <!--轮播图-->
+  <div class="lunbotu">
+    <div id="demo1" class="slideBox">
+      <ul class="items">
+        <li><a href="javascript:;" ><img src="images/banner1.jpg"></a></li>
+        <li><a href="javascript:;" ><img src="images/banner2.jpg"></a></li>
+        <li><a href="javascript:;" ><img src="images/banner3.jpg"></a></li>
+      </ul>
+    </div>
+    <div class="luobotu_mask">
+      <!--左侧头部切换-->
+      <div class="left">
+        <ul class="left_ul">
 
+        </ul>
+         <!-- <ul class="left_ul">
+            <li>
+              <a href="javascript:;">家庭保洁</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工ddd</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工ddd</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">上门按摩</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工vv</a></li>
+                <li><a href="javascript:;">小时工vv</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工vv</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">上门维修</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工pp</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工ppp</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">家电清洗</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工jjj</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工fff</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">衣物洗护</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工fff</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工ff</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">搬家速运</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工bbb</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工bbb</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">美容美妆</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工hhh</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工hhh</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">上门安装</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工tttt</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工ttt</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">上门医护</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工55</a></li>
+                <li><a href="javascript:;">小时工</a></li>
+                <li><a href="javascript:;">小时工555</a></li>
+                <li><a href="javascript:;">小时工555</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">保姆月嫂</a>
+              <i class="iconfont icon-jiantouyou"></i>
+              &lt;!&ndash;小三角&ndash;&gt;
+              <span class="sanjiao"></span>
+              &lt;!&ndash;右侧内容区&ndash;&gt;
+              <ul class="right_ul">
+                <li><a href="javascript:;">小时工4</a></li>
+                <li><a href="javascript:;">小时工1</a></li>
+                <li><a href="javascript:;">小时工1</a></li>
+                <li><a href="javascript:;">小时工1</a></li>
+                <li><a href="javascript:;">小时工2</a></li>
+              </ul>
+            </li>
+          </ul>-->
+      </div>
+    </div>
+  </div>
+
+  <!--家庭保洁-->
+  <div class="home">
+
+  </div>
 
 
 </div>
 </body>
-<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
-<script type="text/javascript" src="js/template.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script id="box" type="text/html">
 
+<script type="text/javascript" src="js/template.js"></script>
+
+<script id="left_nav" type="text/html">
+{{each data}}
+<li>
+  <a href="javascript:;">家庭保洁</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工ddd</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工ddd</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">上门按摩</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工vv</a></li>
+    <li><a href="javascript:;">小时工vv</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工vv</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">上门维修</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工pp</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工ppp</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">家电清洗</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工jjj</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工fff</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">衣物洗护</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工fff</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工ff</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">搬家速运</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工bbb</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工bbb</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">美容美妆</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工hhh</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工hhh</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">上门安装</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工tttt</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工ttt</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">上门医护</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工55</a></li>
+    <li><a href="javascript:;">小时工</a></li>
+    <li><a href="javascript:;">小时工555</a></li>
+    <li><a href="javascript:;">小时工555</a></li>
+  </ul>
+</li>
+<li>
+  <a href="javascript:;">保姆月嫂</a>
+  <i class="iconfont icon-jiantouyou"></i>
+  <!--小三角-->
+  <span class="sanjiao"></span>
+  <!--右侧内容区-->
+  <ul class="right_ul">
+    <li><a href="javascript:;">小时工4</a></li>
+    <li><a href="javascript:;">小时工1</a></li>
+    <li><a href="javascript:;">小时工1</a></li>
+    <li><a href="javascript:;">小时工1</a></li>
+    <li><a href="javascript:;">小时工2</a></li>
+  </ul>
+</li>
+  
+{{/each}}  
 </script>
 
+<script type="text/javascript">
+  $(function () {
+    //方式一轮播
+    /*$('#demo1').slideBox({
+      direction:'left',
+      duration:1,
+      easing: 'swing',//swing,linear
+      delay: 3,//unit:seconds
+      startIndex: 0,
+      hideClickBar: false,
+      clickBarRadius: 50,//unit:px
+      hideBottomBar: true,
+      width: 1300,
+      height: 420
+    });*/
+    $.get('http://localhost:4000/index',function (data) {
+      $('.left_ul').html(template('left_nav',{data:data}))
+      console.log(data);
+    })
 
+  })
+</script>
 </html>
