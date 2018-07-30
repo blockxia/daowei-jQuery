@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js \"gulp livereload\" ",
+    "dev":"gulp livereload"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,17 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-less": "^3.3.2",
+    "gulp-uglify": "^3.0.0",
+    "open": "0.0.5"
   }
 }
