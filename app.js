@@ -3,6 +3,7 @@ var express = require('express')
 var router = require('./routes/route.js')
 var app=express()
 
+//cors解决跨域问题
 //const cors=require('cors')
 //app.use(cors())
 app.use(express.static("dist"))
