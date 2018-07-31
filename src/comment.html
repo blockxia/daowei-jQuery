@@ -64,92 +64,53 @@
     <!--********************************************-->
 
       <div class="home">
-        <div class="home_wrapper">
-          <div class="title">服务商</div>
+        <div class="home_header">
+          <div class="title_left">
+            <div class="time">
+              <span class="big">蓝犀牛</span>
+              <span class="gray">营业时间</span>
+              <span>00:00-23:59</span>
+              <span class="gray">最近可预约时间：</span>
+              <span class="red">07月31日 18:30</span>
+            </div>
+          </div>
+          <div class="right">
+            <div class="wrap">
+              <ul class="list">
+                <li>
+                  <span class="font_red">8888</span><br>
+                  <span class="font">成功接单</span>
+                </li>
+                <li>
+                  <span class="font_red">8888</span><br>
+                  <span class="font">成功接单</span>
+                </li>
+                <li>
+                  <span class="font_red">8888</span><br>
+                  <span class="font">成功接单</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="black_nav">
+          <ul class="black_nav_ul">
+            <li>服务项目</li>
+            <li>服务项目</li>
+            <li>服务项目</li>
+          </ul>
         </div>
         <!--五页-->
         <div class="home_left">
-          <div class="home_imgwrapper">
-            <!--<div class="img_wrapper">
-              <div class="padding_box">
-                <div class="img">
-                  <img src='images/jujia.jpg' alt="">
-                </div>
-                <div class="img_title">
-                  <i class="iconfont icon-homepage"></i>
-                  <span> 蓝犀牛</span>
-                </div>
-                <div class="img_price">
-                  <span class="font_red">已接单6129单</span>
-                  <span class="font_white">好评98%</span>
-                </div>
+          <div class="fuwu_item">
+            <div class="fuwu_title">
+              <div class="font_fuwu">
+                <span>服务项目</span>
               </div>
+              <!--<div class="line_red"></div>-->
             </div>
-            <div class="img_wrapper">
-              <div class="padding_box">
-                <div class="img">
-                  <img src='images/jujia.jpg' alt="">
-                </div>
-                <div class="img_title">
-                  <i class="iconfont icon-homepage"></i>
-                  <span> 蓝犀牛</span>
-                </div>
-                <div class="img_price">
-                  <span class="font_red">已接单6129单</span>
-                  <span class="font_white">好评98%</span>
-                </div>
-              </div>
-            </div>
-            <div class="img_wrapper">
-              <div class="padding_box">
-                <div class="img">
-                  <img src='images/jujia.jpg' alt="">
-                </div>
-                <div class="img_title">
-                  <i class="iconfont icon-homepage"></i>
-                  <span> 蓝犀牛</span>
-                </div>
-                <div class="img_price">
-                  <span class="font_red">已接单6129单</span>
-                  <span class="font_white">好评98%</span>
-                </div>
-              </div>
-            </div>-->
-           <!-- <div class="img_wrapper">
-              <div class="padding_box">
-                <div class="img">
-                  <img src='images/jujia.jpg' alt="">
-                </div>
-                <div class="img_title">
-                  <i class="iconfont icon-homepage"></i>
-                  <span> 蓝犀牛</span>
-                </div>
-                <div class="img_price">
-                  <span class="font_red">已接单6129单</span>
-                  <span class="font_white">好评98%</span>
-                </div>
-              </div>
-            </div>-->
-
           </div>
-       <!--   <div class="home_imgwrapper">
-            <div class="img_wrapper">
-              <div class="padding_box">
-                <div class="img">
-                  <img src='images/jujia.jpg' alt="">
-                </div>
-                <div class="img_title">
-                  <i class="iconfont icon-homepage"></i>
-                  <span> 蓝犀牛</span>
-                </div>
-                <div class="img_price">
-                  <span class="font_red">已接单6129单</span>
-                  <span class="font_white">好评98%</span>
-                </div>
-              </div>
-            </div>
 
-          </div>-->
 
         </div>
 
@@ -212,25 +173,8 @@
 </body>
 
 <script type="text/javascript" src="js/template.js"></script>
-<!--导航-->
-<script id="left_nav" type="text/html">
-{{each data}}
-<li>
-  <a href="javascript:;">{{$value.serviceIndex}}</a>
-  <i class="iconfont icon-jiantouyou"></i>
-  <!--小三角-->
-  <span class="sanjiao"></span>
-  <!--右侧内容区-->
-  <ul class="right_ul">
-    {{each $value.serviceType}}
-    <li><a href="javascript:;">{{$value}}</a></li>
-    {{/each}}
-  </ul>
-</li>
-  
-{{/each}}  
-</script>
-<!--服务商-详情-->
+
+<!--服务商-详情
 <script id="service_home" type="text/html">
 {{each data}}
   <div class="img_wrapper">
@@ -254,7 +198,7 @@
 
 
 {{/each}}
-</script>
+</script>-->
 <!--热门城市-->
 <script id="city_wrap"    type="text/html">
   <div class="remen_city">
@@ -273,10 +217,10 @@
 <script type="text/javascript">
   $(function () {
 
-    $.get('http://localhost:4000/service',function (data) {
+   /* $.get('http://localhost:4000/service',function (data) {
       $('.home_imgwrapper').html(template('service_home',{data:data}))
       console.log(data);
-    })
+    })*/
     $.get('http://localhost:4000/city',function (data) {
       $('.city').html(template('city_wrap',{data:data}))
      // console.log(data);

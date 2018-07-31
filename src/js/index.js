@@ -6,8 +6,4 @@ $(function () {
       $(".header").removeClass('on')
     }
   })
-
-
-
-
 })

@@ -260,6 +260,7 @@
       //头部标题切换，find找到所有的子元素,动态添加再删除
     var $ul=$('.header_right_font')
         console.log($ul);
+    //中间是直接写子元素，不用再一层一层找子元素
         $ul.on('click','li',function () {
           console.log($ul.find("a"))
           $ul.find("a").removeClass("active")

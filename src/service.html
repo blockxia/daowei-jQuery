@@ -212,24 +212,7 @@
 </body>
 
 <script type="text/javascript" src="js/template.js"></script>
-<!--导航-->
-<script id="left_nav" type="text/html">
-{{each data}}
-<li>
-  <a href="javascript:;">{{$value.serviceIndex}}</a>
-  <i class="iconfont icon-jiantouyou"></i>
-  <!--小三角-->
-  <span class="sanjiao"></span>
-  <!--右侧内容区-->
-  <ul class="right_ul">
-    {{each $value.serviceType}}
-    <li><a href="javascript:;">{{$value}}</a></li>
-    {{/each}}
-  </ul>
-</li>
-  
-{{/each}}  
-</script>
+
 <!--服务商-详情-->
 <script id="service_home" type="text/html">
 {{each data}}
