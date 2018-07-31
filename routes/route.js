@@ -3,6 +3,9 @@ var router = express.Router();
 
 //首页数据
 var index = require('../data/index.json')
+
+//热门评论数据
+var city = require('../data/city.json')
 //评论数据
 var comment = require('../data/comment.json')
 // 每一项数据
@@ -13,8 +16,15 @@ var service = require('../data/service.json')
 router.get('/index',function (req,res) {
   res.send(index)
 })
+router.get('/city',function (req,res) {
+  res.send(city)
+})
 
-router.get('/',function (req,res) {
+router.get('/service',function (req,res) {
+  res.send(service)
+})
+
+router.get('/comment',function (req,res) {
   res.send(comment)
 })
 
