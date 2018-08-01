@@ -1457,87 +1457,90 @@
             }
 
           }
-          &>a{
-            .item{
+          .comments{
+            &>a{
+              .item{
 
-              width: 960px;
-              height: 200px;
-              //   background: pink;
-              border-bottom: 1px solid #bbb;
-              box-sizing: border-box;
-              padding: 20px;
-              .item_inner{
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                .left{
-                  width: 80px;
-                  height: 80px;
-                  float: left;
-                  .img_inner{
-                    width: 40px;
-                    height: 40px;
-                    background: pink;
-                    &>img{
-                      width: 100%;
-                      height: 100%;
-                    }
-                  }
-
-                }
-                .right{
-                  width: 705px;
-                  height: 150px;
-                  float: left;
-                  //background-color: #ffc3df;
+                width: 960px;
+                height: 200px;
+                //   background: pink;
+                border-bottom: 1px solid #bbb;
+                box-sizing: border-box;
+                padding: 20px;
+                .item_inner{
+                  width: 100%;
+                  height: 100%;
                   overflow: hidden;
-                  .info{
-                    width: 800px;
-                    height: 160px;
+                  .left{
+                    width: 80px;
+                    height: 80px;
                     float: left;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                   line-height:30px;
-                    overflow: hidden;
-                    box-sizing: border-box;
-                    margin-left: 20px;
-                    .title{
-                      height: 30px;
-                      font-size: 16px;
-                     // margin-top: 20px;
-                    }
-                    .info_gray{
-                      height: 25px;
-                      font-size: 14px;
-                      color: #7e8c8d;
-                    }
-                    .sell{
-                      font-size: 16px;
-                      height: 25px;
-                      margin-bottom: 10px;
-                      &>span{
-                        color: #bbb;
-                      }
-                      .jiage{
-                        font-size: 14px;
+                    .img_inner{
+                      width: 40px;
+                      height: 40px;
+                      background: pink;
+                      &>img{
+                        width: 100%;
+                        height: 100%;
                       }
                     }
-                    .shangjiahuifu{
-                      width: 800px;
-                      height:40px;
-                      //background: pink;
-                      border-top:solid 1px #bbbbbb;
-                      .blue{
-                        color: paleturquoise;
-                      }
-                    }
-                  }
 
+                  }
+                  .right{
+                    width: 705px;
+                    height: 150px;
+                    float: left;
+                    //background-color: #ffc3df;
+                    overflow: hidden;
+                    .info{
+                      width: 800px;
+                      height: 160px;
+                      float: left;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      line-height:30px;
+                      overflow: hidden;
+                      box-sizing: border-box;
+                      margin-left: 20px;
+                      .title{
+                        height: 30px;
+                        font-size: 16px;
+                        // margin-top: 20px;
+                      }
+                      .info_gray{
+                        height: 25px;
+                        font-size: 14px;
+                        color: #7e8c8d;
+                      }
+                      .sell{
+                        font-size: 16px;
+                        height: 25px;
+                        margin-bottom: 10px;
+                        &>span{
+                          color: #bbb;
+                        }
+                        .jiage{
+                          font-size: 14px;
+                        }
+                      }
+                      .shangjiahuifu{
+                        width: 800px;
+                        height:40px;
+                        //background: pink;
+                        border-top:solid 1px #bbbbbb;
+                        .blue{
+                          color: paleturquoise;
+                        }
+                      }
+                    }
+
+                  }
                 }
               }
             }
           }
+
         }
 
         //分页器
@@ -1578,6 +1581,7 @@
               justify-content: center;
               align-items: center;
               &>a{
+                /*分页器方块*/
                 .block{
                   &.active{
                     background: red;

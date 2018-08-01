@@ -301,7 +301,10 @@
               </div>
               <!--<div class="line_red"></div>-->
             </div>
-            <!--用户评论每一项item-->
+            <div class="comments">
+
+            </div>
+          <!--  &lt;!&ndash;用户评论每一项item&ndash;&gt;
             <a href="javascript:;">
               <div class="item">
                 <div class="item_inner">
@@ -335,8 +338,8 @@
                   </div>
                 </div>
               </div>
-            </a>
-
+            </a>-->
+        
 
           </div>
           <!--分页器-->
@@ -348,16 +351,7 @@
                   </div>
                 </div>
                 <div class="center">
-                  <a href="javascript:;" >
-                    <div class="block active">
-                      1
-                    </div>
-                  </a>
-                  <a href="javascript:;">
-                    <div class="block">
-                      2
-                    </div>
-                  </a>
+               <!--省略号-->
                   <a href="javascript:;">
                     <div class="block">
                       ...
@@ -433,66 +427,126 @@
 
 <script type="text/javascript" src="js/template.js"></script>
 
-<!--服务商-详情
-<script id="service_home" type="text/html">
+<!--分页block-->
+<script id="pages" type="text/html">
 {{each data}}
-  <div class="img_wrapper">
-    <a href="">
-      <div class="padding_box">
-        <div class="img">
-          <img src={{$value.imgUrl}} alt="">
-        </div>
-        <div class="img_title">
-          <i class="iconfont icon-homepage"></i>
-          <span> {{$value.title}}</span>
-        </div>
-        <div class="img_price">
-          <span class="font_red">已接单{{$value.orderCount}}单</span>
-          <span class="font_white">好评{{$value.positiveRate}}</span>
-        </div>
+    <a href="javascript:;" id={{$index}} onclick="pages(id)">
+      <div class="block">
+       {{$value}}
       </div>
     </a>
-  </div>
-
-
-
 {{/each}}
-</script>-->
-<!--热门城市-->
-<script id="city_wrap"    type="text/html">
-  <div class="remen_city">
-    <span>热门城市</span>
-  </div>
-  <div class="list">
-    <ul class="city_ul">
-      {{each data}}
-        {{each $value.hotCity}}
-      <li><a href="javascript:;">{{$value}}</a></li>
-        {{/each}}
-      {{/each}}
-    </ul>
-  </div>
+</script>
+<!--用户评论每一项item-->
+<script id="comments"    type="text/html">
+  {{each data}}
+  <a href="javascript:;">
+    <div class="item">
+      <div class="item_inner">
+        <div class="left">
+          <div class="img_inner">
+            <img src={{$value.iconUrl}} alt="">
+          </div>
+        </div>
+        <div class="right">
+          <div class="info">
+            <div class="title">
+              <span>{{$value.nick}}</span>
+            </div>
+            <div class="info_gray">
+                        <span>{{$value.createtime}}</span>
+            </div>
+            <div class="info_gray">
+              <span> {{$value.comment}}</span>
+            </div>
+            <div class="sell">
+              <i class="iconfont icon-dizhiguanli"></i>
+              <span class="jiage">{{$value.city}} {{$value.area}}</span>
+            </div>
+            <div class="shangjiahuifu">
+              <span class="blue">商家回复：</span>
+              <span>感谢亲对老师的认可，欢迎下次继续预约，推荐关注店铺...</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </a>
+  {{/each}}
 </script>
 <script type="text/javascript">
   $(function () {
-
-   /* $.get('http://localhost:4000/service',function (data) {
-      $('.home_imgwrapper').html(template('service_home',{data:data}))
-      console.log(data);
-    })*/
-   /* $.get('http://localhost:4000/city',function (data) {
-      $('.city').html(template('city_wrap',{data:data}))
-     // console.log(data);
-    })*/
+   /*-----------------------------------------------------------------*/
    //分页器效果
     $.get('http://localhost:4000/comment',function (data) {
-     //console.log(data);
-      const totalNum=data.length/10
-      console.log(totalNum);
-
+      console.log(data);
+      var $pages=template('pages',{data:data});
+      var $pageWrap=$('#comment .detail > .home .home_left .fenye .inner .center ');
+      $pageWrap.html($pages)
+      changePage(0)
     })
+  
+    $.get('http://localhost:4000/comment?page=0',function (data) {
+      console.log(data);
+      var $comments = template('comments', {data: data})
+      var $comment  = $('#comment .detail > .home .home_left .usercomment_item .comments');
+      $comment.html($comments);
+      $pages = $('#comment .detail > .home .home_left .fenye .inner .center > a .block')
+    })
+  })
+  
+//定义对应显示数值的id
+  var num=0;
+  var $pages = $('#comment .detail > .home .home_left .fenye .inner .center > a .block');
+  var $left=$('#comment .detail > .home .home_left .fenye .inner .left .prew');
+  var $right=$('#comment .detail > .home .home_left .fenye .inner .right .last');
+  function pages(id) {
+    num=id;
+    //query参数请求数据
+    $.get('http://localhost:4000/comment?page='+id,function (data) {
+      //console.log(data);
+      var $comments = template('comments', {data: data})
+      var $comment  = $('#comment .detail > .home .home_left .usercomment_item .comments');
+      $comment.html($comments);
+    })
+    changePage(id)
+  }
+  
+  
+  //页面变化的函数
+  function changePage(num) {
+    var $pages = $('#comment .detail > .home .home_left .fenye .inner .center > a .block');
+    $right.removeClass('active')
+    $left.removeClass('active')
+    if(num==0){
+      $left.removeClass('active')
+    }else if(num==8){
+      $right.removeClass('active')
+    }
+    $($pages[num]).siblings().removeClass('active')
+    $($pages[num]).addClass('active')
+  }
 
+  //上一页和下一页
+  $left.click(function () {
+    $right.removeClass('active')
+    num--
+    if (num<0) {
+      num = 0
+      $left.addClass('active')
+    }
+    pages(num)
+  })
 
+  $right.click(function () {
+    $left.removeClass('active')
+    num++
+    if (num>=$pages.length) {
+      num = $pages.length-1
+      $right.addClass('active')
+    }
+    pages(num)
   })
 </script>
 </html>
