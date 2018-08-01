@@ -986,7 +986,7 @@
 #comment{
   width: 100%;
   position: relative;
-
+  background: #F8F8F8;
   //overflow: hidden;
   //头部导航
   .header{
@@ -1169,6 +1169,7 @@
           height: 40px;
           margin-left: 28px;
           overflow: hidden;
+          font-size: 14px;
           &>li{
             float: left;
             width: 140px;
@@ -1184,37 +1185,440 @@
       }
       .home_left{
         width: 960px;
-       height:300px;
+     //  height:300px;
         margin-left: 30px;
-        background: paleturquoise;
+    //  background: paleturquoise;
         float: left;
+        //服务项目
         .fuwu_item{
           width: 100%;
-          height:100%;
-          background: pink;
+         // height:300px;
+         background: #fff;
+
             .fuwu_title{
              // width:100%;
-              width: 912px;
-              height:60px;
-             // box-sizing: border-box;
-             //padding-top: 20px;
-             // background: #000;
+              width: 960px;
+              height:64px;
+              box-sizing: border-box;
+              padding:0 20px;
               overflow: hidden;
-              border-bottom: 1px solid #7e8c8d;
+              .father{
+                width: 918px;
+                height:64px;
+                overflow: hidden;
+                box-sizing: border-box;
+                border-bottom: 1px solid #bbb;
+                .font_fuwu{
+                  width:64px ;
+                  height: 39px;
+                  margin-top: 20px;
+                  &>span{
+                    display: inline-block;
+                    width: 100%;
+                    height: 39px;
+                    line-height:41px ;
+                   border-bottom: 4px solid red;
+                  }
+                }
+              }
+
+
+            }
+           &>a{
+             .item{
+               &:hover{
+                 background-color:#eee ;
+               }
+               width: 960px;
+               height: 200px;
+               //   background: pink;
+               border-bottom: 1px solid #bbb;
+               box-sizing: border-box;
+               padding: 20px;
+               .item_inner{
+                 width: 100%;
+                 height: 100%;
+                 overflow: hidden;
+                 .left{
+                   width: 150px;
+                   height: 150px;
+                   float: left;
+                   &>img{
+                     width: 100%;
+                     height: 100%;
+                   }
+                 }
+                 .right{
+                   width: 705px;
+                   height: 150px;
+                   float: left;
+                   //background-color: #ffc3df;
+                   overflow: hidden;
+                   .info{
+                     width: 600px;
+                     height: 150px;
+                     float: left;
+                     display: flex;
+                     flex-direction: column;
+                     align-items: flex-start;
+                     line-height:42px;
+                     overflow: hidden;
+                     box-sizing: border-box;
+                     margin-left: 20px;
+                     .title{
+                       height: 42px;
+                       font-size: 30px;
+                       margin-top: 20px;
+                     }
+                     .info_gray{
+                       height: 42px;
+                       font-size: 14px;
+                       color: #7e8c8d;
+                     }
+                     .sell{
+                       height: 42px;
+                       &>span{
+                         color: red;
+                       }
+                       .jiage{
+                         font-size: 28px;
+                       }
+                     }
+                   }
+                   .yishou{
+                     width: 85px;
+                     height: 150px;
+                     float: left;
+                     //  background: #ff21fb;
+                     display: flex;
+                     justify-content: flex-start;
+                     align-items: flex-end;
+                     &>span{
+                       display: block;
+                       color:#7e8c8d;
+                     }
+                   }
+                 }
+               }
+             }
+           }
+        }
+        //商家简介
+        .shangjia_item{
+          margin-top: 70px;
+          width: 100%;
+          // height:300px;
+          background: #fff;
+
+          .fuwu_title{
+            // width:100%;
+            width: 960px;
+            height:64px;
+            box-sizing: border-box;
+            padding:0 20px;
+            overflow: hidden;
+            .father{
+              width: 918px;
+              height:64px;
+              overflow: hidden;
+              box-sizing: border-box;
+              border-bottom: 1px solid #bbb;
               .font_fuwu{
                 width:64px ;
                 height: 39px;
-                background: #000;
                 margin-top: 20px;
-                border-bottom: 2px solid red;
-
-                &>span{}
-              }
-              .line_red{
-
+                &>span{
+                  display: inline-block;
+                  width: 100%;
+                  height: 39px;
+                  line-height:41px ;
+                  border-bottom: 4px solid red;
+                }
               }
             }
 
+
+          }
+          &>a{
+            .item{
+              &:hover{
+                background-color:#eee ;
+              }
+              width: 960px;
+              height: 200px;
+              //   background: pink;
+              // border-bottom: 1px solid #bbb;
+              box-sizing: border-box;
+              padding: 20px;
+              .item_inner{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                .left{
+                  width: 150px;
+                  height: 150px;
+                  float: left;
+                  &>img{
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                .right{
+                  width: 705px;
+                  height: 150px;
+                  float: left;
+                  //background-color: #ffc3df;
+                  overflow: hidden;
+                  .info{
+                    width: 600px;
+                    height: 150px;
+                    float: left;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    line-height:42px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    margin-left: 20px;
+                    .title{
+                      height: 42px;
+                      font-size: 30px;
+                      margin-top: 20px;
+                    }
+                    .info_gray{
+                      height: 42px;
+                      font-size: 14px;
+                      color: #7e8c8d;
+                    }
+                    .sell{
+                      height: 42px;
+                      &>span{
+                        color: red;
+                      }
+                      .jiage{
+                        font-size: 28px;
+                      }
+                    }
+                  }
+                  .yishou{
+                    width: 85px;
+                    height: 150px;
+                    float: left;
+                    //  background: #ff21fb;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    &>span{
+                      display: block;
+                      color:#7e8c8d;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        //用户评论
+        .usercomment_item{
+          margin-top: 10px;
+          width: 100%;
+          // height:300px;
+          background: #fff;
+
+          .fuwu_title{
+            // width:100%;
+            width: 960px;
+            height:64px;
+            box-sizing: border-box;
+            padding:0 20px;
+            overflow: hidden;
+            .father{
+              width: 918px;
+              height:64px;
+              overflow: hidden;
+              box-sizing: border-box;
+              border-bottom: 1px solid #bbb;
+              .font_fuwu{
+                width:60px ;
+                height: 39px;
+                margin-top: 20px;
+                border-bottom: 4px solid red;
+                &>span{
+                  font-size: 14px;
+                  display: inline-block;
+                  width: 160px;
+                  height: 39px;
+                  line-height:41px ;
+
+                }
+              }
+
+            }
+
+          }
+          &>a{
+            .item{
+
+              width: 960px;
+              height: 200px;
+              //   background: pink;
+              border-bottom: 1px solid #bbb;
+              box-sizing: border-box;
+              padding: 20px;
+              .item_inner{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                .left{
+                  width: 80px;
+                  height: 80px;
+                  float: left;
+                  .img_inner{
+                    width: 40px;
+                    height: 40px;
+                    background: pink;
+                    &>img{
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+
+                }
+                .right{
+                  width: 705px;
+                  height: 150px;
+                  float: left;
+                  //background-color: #ffc3df;
+                  overflow: hidden;
+                  .info{
+                    width: 800px;
+                    height: 160px;
+                    float: left;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                   line-height:30px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    margin-left: 20px;
+                    .title{
+                      height: 30px;
+                      font-size: 16px;
+                     // margin-top: 20px;
+                    }
+                    .info_gray{
+                      height: 25px;
+                      font-size: 14px;
+                      color: #7e8c8d;
+                    }
+                    .sell{
+                      font-size: 16px;
+                      height: 25px;
+                      margin-bottom: 10px;
+                      &>span{
+                        color: #bbb;
+                      }
+                      .jiage{
+                        font-size: 14px;
+                      }
+                    }
+                    .shangjiahuifu{
+                      width: 800px;
+                      height:40px;
+                      //background: pink;
+                      border-top:solid 1px #bbbbbb;
+                      .blue{
+                        color: paleturquoise;
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+
+        //分页器
+        .fenye{
+          width: 100%;
+          height:152px;
+          background: #fff;
+          overflow:hidden;
+          .inner{
+            width: 630px;
+            height:130px;
+           // background: pink;
+            margin-left: 170px;
+            overflow:hidden;
+            .left{
+             float: left;
+              width: 80px;
+              height:130px;
+          //  background: plum;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            .prew{
+                width: 70px;
+                height: 30px;
+                text-align: center;
+                line-height:30px ;
+              box-sizing: border-box;
+              border: 1px solid #eee;
+              }
+            }
+            .center{
+              width: 470px;
+              height:130px;
+              float: left;
+           //   background: pink;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &>a{
+                .block{
+                  &.active{
+                    background: red;
+                    color:#fff;
+                  }
+                  &:hover{
+                    background: red;
+                    color:#fff;
+                  }
+                  width: 30px;
+                  height:30px;
+                  border: 1px solid #eee;
+                 background: #fff;
+                 color:#000;
+                  line-height:30px;
+                  text-align: center;
+                  margin: 0 5px;
+                }
+              }
+            }
+            .right{
+            float: right;
+              width: 80px;
+              height:130px;
+            //  background: paleturquoise;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+             .last{
+               width: 70px;
+               height: 30px;
+               text-align: center;
+               line-height:30px ;
+              // background: purple;
+               box-sizing: border-box;
+               border: 1px solid #eee;
+
+              }
+            }
+          }
         }
 
       }

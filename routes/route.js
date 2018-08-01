@@ -7,7 +7,7 @@ var index = require('../data/index.json')
 //热门评论数据
 var city = require('../data/city.json')
 //评论数据
-var comment = require('../data/comment.json')
+var comments = require('../data/comment.json')
 // 每一项数据
 var item = require('../data/item.json')
 //服务页数据
@@ -25,7 +25,7 @@ router.get('/service',function (req,res) {
 })
 
 router.get('/comment',function (req,res) {
-  res.send(comment)
+  res.send(comments)
 })
 
 
